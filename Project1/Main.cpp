@@ -8,7 +8,7 @@
 #include <fstream>
 #include <iomanip>
 
-using namespace std;
+using namespace std; 
 
 //CONSTANTS
 const int NAMES_AMOUNT = 4;
