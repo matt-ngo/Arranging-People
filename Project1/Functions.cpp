@@ -4,6 +4,9 @@
 #include "Header.h"
 using namespace std;
 
+//Counter for printing
+static int numbering = 1;
+
 void getNames(string namesArr[], int size)
 {
 	cout << "Enter four different names: " << endl;
@@ -17,10 +20,13 @@ void getNames(string namesArr[], int size)
 
 void printArray(string namesArr[], int size)
 {
-	cout << "[ ";
+	cout << setw(2) << numbering << ") [ ";
+
 	for (int i = 0; i < size; ++i)
 		cout << namesArr[i] << " ";
+
 	cout << "]" << endl;
+	++numbering;
 }
 
 int fact(int num)
@@ -36,13 +42,15 @@ void printCombinations(string namesArr[], int n, int r)
 	//calculate total of total combinations
 	int nCr = fact(n) / (fact(r) * fact(n - r));
 	cout << "Total Subsets = (" << n << " choose " << r << ") = " << nCr << endl;
+	cout << string(40, '-') << endl;
 
 	//array for subsets of name array (ideally [r] but not possible for arrays)
 	string subset[50];
 
 	// Print all combinations recursively 
 	combinationCalculator(namesArr, n, r, 0, subset, 0);
-
+	//reset counter for printing
+	numbering = 1;
 	cout << endl;
 }
 
@@ -81,7 +89,8 @@ void printPermutations(string namesArr[], int n, int r)
 	//calculate total of total permutations
 	int nPr = (fact(n) / fact(n - r));
 	cout << "Total Permutations = P(" << n << ", " << r << ") = " << nPr << endl;
-	
+	cout << string(40, '-') << endl;
+
 	//for r = n, no combinations needed, just permute
 	if (n == r)
 		heapPermutation(namesArr, r, r);
@@ -110,6 +119,8 @@ void printPermutations(string namesArr[], int n, int r)
 			heapPermutation(namesArr, r, r);
 		}
 	}
+	//reset counter for printing
+	numbering = 1;
 	cout << endl;
 }
 
