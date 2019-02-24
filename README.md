@@ -36,7 +36,7 @@ nations with 3 People”)
 ## *Note to self* 
 - Combination functionality is perfect, will theoretically work for any N choose R
 
-  - Algorithm sourced from : https://www.geeksforgeeks.org/print-subsets-given-size-set/
+  - Algorithm sourced from: https://www.geeksforgeeks.org/print-subsets-given-size-set/
   
  - Permutation functionality is currently limited to cases given: (R = N or N-1)
  
@@ -46,3 +46,5 @@ nations with 3 People”)
   same recursive algorithm in combinationCalculator()
   
       - ~ Base case --> instead of printing when a combo is found, send it to the permutor
+      
+    - Algorithm for finding permutations sourced from: https://www.geeksforgeeks.org/heaps-algorithm-for-generating-permutations/
