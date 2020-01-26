@@ -1,7 +1,7 @@
 //Matthew Ngo
 //CS 262 TTh
 
-#include "Header.h"
+#include "Functions.h"
 using namespace std;
 
 //Counter for printing
