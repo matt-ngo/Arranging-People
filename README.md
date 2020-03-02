@@ -1,4 +1,4 @@
-# CS-A262-Lab-2-Arranging-People
+# CS A262 Lab-2: Arranging-People
 
 For this lab, you will generate all possible permuations and combinations for a group of four
 people.
